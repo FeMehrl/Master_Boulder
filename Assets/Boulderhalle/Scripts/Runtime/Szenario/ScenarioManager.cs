@@ -45,6 +45,9 @@ namespace Boulderhalle
 
         public bool IsPopupOpen => popup != null && popup.IsOpen;
 
+        /// <summary>Alle auswählbaren Objekte der Szene.</summary>
+        public static IReadOnlyList<ScenarioObject> All => Objects;
+
         public static void Register(ScenarioObject o)
         {
             if (!Objects.Contains(o)) Objects.Add(o);
@@ -89,6 +92,7 @@ namespace Boulderhalle
         public void OnObjectActivated(ScenarioObject o)
         {
             if (IsPopupOpen || Time.time < blockedUntil) return;
+            Debug.Log($"Szenario: '{o.name}' ausgelöst ({o.kind}).");
 
             switch (o.kind)
             {

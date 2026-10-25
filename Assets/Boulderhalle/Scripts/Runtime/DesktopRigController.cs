@@ -24,6 +24,9 @@ namespace Boulderhalle
         CharacterController controller;
         float pitch;
         float verticalVelocity;
+        ScenarioObject aimed;      // Objekt, auf das gerade gezielt wird
+        bool aimedTooFar;          // Startgriff anvisiert, aber zu weit weg
+        GUIStyle labelStyle;
 
         void Start()
         {
@@ -77,7 +80,9 @@ namespace Boulderhalle
             if (release) SetCursorLocked(false);
             if (capture && Cursor.lockState == CursorLockMode.Locked) use = true;
             else if (capture) SetCursorLocked(true);
-            if (use && scenario != null) UseObjectInView();
+
+            UpdateAim();
+            if (use) UseAimedObject();
 
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -93,13 +98,93 @@ namespace Boulderhalle
             controller.Move(velocity * Time.deltaTime);
         }
 
-        void UseObjectInView()
+        /// <summary>
+        /// Zielhilfe: wählt das auswählbare Objekt, das der Bildmitte am nächsten liegt
+        /// (kleiner Toleranzkegel, freie Sicht nötig). So muss man kleine Objekte nicht pixelgenau treffen.
+        /// </summary>
+        void UpdateAim()
         {
-            if (!Physics.Raycast(cameraTransform.position, cameraTransform.forward, out var hit, 4f, ~0, QueryTriggerInteraction.Collide)) return;
-            var target = hit.collider.GetComponentInParent<ScenarioObject>();
-            if (target == null) return;
-            if (target.IsStartHold && hit.distance > touchReach) return; // Startgriffe nur direkt an der Wand
-            target.Activate();
+            aimed = null;
+            aimedTooFar = false;
+            var origin = cameraTransform.position;
+            var forward = cameraTransform.forward;
+            float best = float.MaxValue;
+
+            foreach (var o in ScenarioManager.All)
+            {
+                if (o == null) continue;
+                var toObject = o.transform.position - origin;
+                float along = Vector3.Dot(toObject, forward);
+                if (along < 0.1f || along > 6f) continue;
+
+                float offAxis = (toObject - forward * along).magnitude;
+                if (offAxis > 0.15f + 0.05f * along) continue;
+                if (!HasLineOfSight(origin, o)) continue;
+
+                float score = offAxis / along;
+                if (score < best)
+                {
+                    best = score;
+                    aimed = o;
+                }
+            }
+
+            if (aimed != null && aimed.IsStartHold)
+                aimedTooFar = Vector3.Distance(origin, aimed.transform.position) > touchReach;
+        }
+
+        bool HasLineOfSight(Vector3 origin, ScenarioObject o)
+        {
+            var toObject = o.transform.position - origin;
+            float distance = toObject.magnitude;
+            if (!Physics.Raycast(origin, toObject / distance, out var hit, distance, ~0, QueryTriggerInteraction.Ignore)) return true;
+            return hit.distance >= distance - 0.3f || hit.collider.GetComponentInParent<ScenarioObject>() == o;
+        }
+
+        void UseAimedObject()
+        {
+            if (aimed == null)
+            {
+                Debug.Log("Desktop-Test: Kein auswählbares Objekt in der Bildmitte.");
+                return;
+            }
+            if (aimedTooFar)
+            {
+                Debug.Log("Desktop-Test: Startgriff zu weit entfernt – geh näher an die Wand.");
+                return;
+            }
+            aimed.Activate();
+        }
+
+        void OnGUI()
+        {
+            var scenario = ScenarioManager.Instance;
+            if (scenario != null && scenario.IsPopupOpen) return;
+
+            if (labelStyle == null)
+            {
+                labelStyle = new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontSize = 20, fontStyle = FontStyle.Bold };
+                labelStyle.normal.textColor = Color.white;
+            }
+
+            // Fadenkreuz
+            float cx = Screen.width / 2f, cy = Screen.height / 2f;
+            var color = aimed != null ? (aimedTooFar ? new Color(1f, 0.6f, 0.2f) : new Color(0.1f, 0.9f, 1f)) : Color.white;
+            var previous = GUI.color;
+            GUI.color = color;
+            GUI.DrawTexture(new Rect(cx - 10f, cy - 1f, 20f, 2f), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(cx - 1f, cy - 10f, 2f, 20f), Texture2D.whiteTexture);
+            GUI.color = previous;
+
+            if (aimed == null) return;
+            string name = aimed.IsStartHold ? "Startgriff" : aimed.title;
+            string text = aimedTooFar ? $"{name} – geh näher an die Wand" : $"[Klick / E]  {name}";
+            var rect = new Rect(cx - 250f, cy + 24f, 500f, 30f);
+            GUI.color = new Color(0f, 0f, 0f, 0.8f);
+            GUI.Label(new Rect(rect.x + 2f, rect.y + 2f, rect.width, rect.height), text, labelStyle);
+            GUI.color = color;
+            GUI.Label(rect, text, labelStyle);
+            GUI.color = previous;
         }
 
         static void SetCursorLocked(bool locked)

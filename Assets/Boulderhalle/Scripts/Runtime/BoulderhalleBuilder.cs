@@ -8,6 +8,8 @@ namespace Boulderhalle
     {
         public GameObject Root;
         public Transform SpawnPoint;
+        /// <summary>Interaktives Szenario (eigenes Root-Objekt, nicht statisch).</summary>
+        public GameObject ScenarioRoot;
         public readonly List<GameObject> WalkableSurfaces = new List<GameObject>();
     }
 
@@ -27,9 +29,12 @@ namespace Boulderhalle
         public const float WallThickness = 0.3f;
 
         static readonly Vector3 HallSofa2Pos = new Vector3(8.9f, 0f, 21.5f);
+        // Kunde auf der Matte, neben dem Chalkbag und Bürste liegen
+        static readonly Vector3 MatSitterPos = new Vector3(-4.75f, ClimbingWallBuilder.MatHeight, 21.4f);
         const float HallSofaYaw = -90f;
 
-        public static BuildResult Build(MaterialLibrary library, int seed = 42)
+        /// <param name="withScenario">true = dynamisches Modell mit dem Szenario "Sturzbereiche freihalten".</param>
+        public static BuildResult Build(MaterialLibrary library, bool withScenario = true, int seed = 42)
         {
             var p = new Palette(library);
             var rnd = new System.Random(seed);
@@ -43,7 +48,15 @@ namespace Boulderhalle
             BuildCustomers(Geo.Group("Kunden", root, Vector3.zero), p, panels, rnd);
             BuildLighting(Geo.Group("Beleuchtung", root, Vector3.zero), p);
 
-            result.SpawnPoint = Geo.Group("Spawnpunkt_Eingang", root, new Vector3(0f, 0f, 1.2f), 0f);
+            // Fester Startpunkt im Eingangsbereich, Blick zwischen Mitarbeiter und Durchgang zur Halle
+            result.SpawnPoint = Geo.Group("Spawnpunkt_Eingang", root, new Vector3(-0.5f, 0f, 1.5f), -30f);
+
+            if (withScenario)
+            {
+                // Belegte Route: Gelb auf Segment 1 (dort klettert ein Kunde).
+                // Freie Route: Pink auf Segment 5 (dort klettert niemand).
+                result.ScenarioRoot = ScenarioBuilder.Build(p, panels[0].StartHolds[0], panels[4].StartHolds[0], MatSitterPos);
+            }
             return result;
         }
 
@@ -145,13 +158,14 @@ namespace Boulderhalle
             };
             PersonBuilder.Create("Mitarbeiter", g, new Vector3(-5.75f, 0f, 4.4f), 90f, PersonBuilder.Waving(), staffOutfit);
 
-            var bubble = Geo.Group("Sprechblase", g, new Vector3(-5.75f, 2.4f, 4.4f), -75f);
-            var bg = Geo.Box("Hintergrund", bubble, new Vector3(0f, 0f, 0.02f), new Vector3(2.0f, 0.55f, 0.02f), p.White, collider: false);
+            // Sprechblase zeigt zum Startpunkt
+            var bubble = Geo.Group("Sprechblase", g, new Vector3(-5.75f, 2.45f, 4.4f), -61f);
+            var bg = Geo.Box("Hintergrund", bubble, new Vector3(0f, 0f, 0.02f), new Vector3(2.4f, 0.7f, 0.02f), p.White, collider: false);
             Geo.NoShadows(bg);
-            var tip = Geo.Box("Spitze", bubble, new Vector3(0f, -0.3f, 0.02f), new Vector3(0.14f, 0.14f, 0.02f), p.White, new Vector3(0f, 0f, 45f), collider: false);
+            var tip = Geo.Box("Spitze", bubble, new Vector3(0f, -0.37f, 0.02f), new Vector3(0.14f, 0.14f, 0.02f), p.White, new Vector3(0f, 0f, 45f), collider: false);
             Geo.NoShadows(tip);
             Geo.Text("Begruessung", bubble, Vector3.zero, 0f,
-                "Hallo und herzlich willkommen!\nDu bist neu hier? Melde dich bitte\nam Anmeldecomputer an.", 0.11f, new Color(0.12f, 0.12f, 0.12f), p.TextMat);
+                "Hallo und herzlich willkommen!\nDu bist neu hier? Dann mach' bitte\nunsere Sicherheitseinweisung.\nBetritt dafür den sportlichen Hallenbereich.", 0.11f, new Color(0.12f, 0.12f, 0.12f), p.TextMat);
 
             // Uhr an der Trennwand (Seite Eingangsbereich)
             Props.Clock("Wanduhr", g, new Vector3(5f, 3.4f, EntranceDepth - 0.13f), 0f, p);
@@ -204,8 +218,8 @@ namespace Boulderhalle
 
             // Auf der Matte
             float matY = ClimbingWallBuilder.MatHeight;
-            PersonBuilder.Create("Kunde_Matte_sitzend_1", g, new Vector3(-5.4f, matY, 11.6f), -105f, PersonBuilder.SittingKneesUp(), p.Outfit(2), blocking: false);
-            PersonBuilder.Create("Kunde_Matte_sitzend_2", g, new Vector3(-5.0f, matY, 21.4f), -100f, PersonBuilder.SittingLegsOut(), p.Outfit(3), blocking: false);
+            PersonBuilder.Create("Kunde_Matte_sitzend_1", g, new Vector3(-5.0f, matY, 11.6f), -105f, PersonBuilder.SittingKneesUp(), p.Outfit(2), blocking: false);
+            PersonBuilder.Create("Kunde_Matte_sitzend_2", g, MatSitterPos, -100f, PersonBuilder.SittingLegsOut(), p.Outfit(3), blocking: false);
             PersonBuilder.Create("Kunde_Matte_spottet", g, new Vector3(-7.6f, matY, 19.7f), -90f, PersonBuilder.Spotting(), p.Outfit(4));
 
             // Auf dem Sofa, auf der Bank und am Regal

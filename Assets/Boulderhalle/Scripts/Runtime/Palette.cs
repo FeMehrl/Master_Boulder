@@ -18,7 +18,7 @@ namespace Boulderhalle
         public readonly Material ScreenCustomer, ScreenStaff, Glass, Frame;
         public readonly Material SofaA, SofaB, SofaC, ChairSeat;
         public readonly Material Terracotta, PotWhite, Soil, Leaf, LeafDark, Stem;
-        public readonly Material MatTop, MatSide, Panel, PanelAlt, Volume, LampPanel;
+        public readonly Material MatTop, MatSide, Panel, PanelAlt, Volume, LampPanel, Highlight;
         public readonly Material White, Black, Red, Brand, TextMat;
         public readonly Material[] Skins, Hairs, Tops, Bottoms, Shoes, Bags;
 
@@ -65,6 +65,7 @@ namespace Boulderhalle
             PanelAlt = Solid("Wandplatte_Grau", Hex("#BFC3C7"), 0.2f);
             Volume = Solid("Volumen", Hex("#4A5560"), 0.2f);
             LampPanel = lib.Emissive("Deckenleuchte", Color.white, new Color(1f, 0.97f, 0.9f) * 2f);
+            Highlight = lib.Emissive("Markierung", Hex("#19E3FF"), Hex("#19E3FF") * 1.6f);
 
             White = Solid("Weiss", Hex("#F5F5F5"), 0.3f);
             Black = Solid("Schwarz", Hex("#151515"), 0.4f);

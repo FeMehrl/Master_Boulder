@@ -24,13 +24,16 @@ namespace Boulderhalle.EditorTools
             "Complete XR Origin Set Up", "XR Origin (XR Rig)", "XR Origin (VR)", "XR Origin"
         };
 
-        [MenuItem("Boulderhalle/Statisches Modell erzeugen (VR)", priority = 0)]
-        public static void BuildForVr() => Build(preferXr: true);
+        [MenuItem("Boulderhalle/Szene mit Szenario erzeugen (VR)", priority = 0)]
+        public static void BuildForVr() => Build(preferXr: true, withScenario: true);
 
-        [MenuItem("Boulderhalle/Statisches Modell erzeugen (Desktop-Test ohne VR)", priority = 1)]
-        public static void BuildForDesktop() => Build(preferXr: false);
+        [MenuItem("Boulderhalle/Szene mit Szenario erzeugen (Desktop-Test ohne VR)", priority = 1)]
+        public static void BuildForDesktop() => Build(preferXr: false, withScenario: true);
 
-        static void Build(bool preferXr)
+        [MenuItem("Boulderhalle/Nur statisches Modell erzeugen (VR)", priority = 20)]
+        public static void BuildStaticForVr() => Build(preferXr: true, withScenario: false);
+
+        static void Build(bool preferXr, bool withScenario)
         {
             if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
 
@@ -38,7 +41,7 @@ namespace Boulderhalle.EditorTools
             RenderSettings.skybox = AssetDatabase.GetBuiltinExtraResource<Material>("Default-Skybox.mat");
 
             var library = new MaterialLibrary();
-            var result = BoulderhalleBuilder.Build(library);
+            var result = BoulderhalleBuilder.Build(library, withScenario);
             SaveMaterials(library);
             MarkStatic(result.Root);
 
@@ -50,7 +53,7 @@ namespace Boulderhalle.EditorTools
             EditorSceneManager.SaveScene(scene, ScenePath);
             AddSceneToBuildSettings();
 
-            Selection.activeGameObject = result.Root;
+            Selection.activeGameObject = result.ScenarioRoot != null ? result.ScenarioRoot : result.Root;
             Debug.Log($"Boulderhalle erzeugt und gespeichert unter {ScenePath} " +
                       (placedXr ? "(mit XR Origin)." : "(mit Desktop-Testrig – für VR siehe README)."));
         }

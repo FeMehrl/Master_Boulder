@@ -12,6 +12,8 @@ namespace Boulderhalle
         public Transform Pivot;
         public float Width, Height, Angle;
         public readonly List<Material> RouteMaterials = new List<Material>();
+        /// <summary>Ankerpunkt des Startgriffs je Route (gleiche Reihenfolge wie RouteMaterials).</summary>
+        public readonly List<Transform> StartHolds = new List<Transform>();
     }
 
     /// <summary>Boulderwand mit Segmenten unterschiedlicher Neigung, Routen, Volumen und Weichbodenmatte.</summary>
@@ -67,7 +69,7 @@ namespace Boulderhalle
                     var mat = p.Solid("Griff_" + route.name, Palette.Hex(route.hex), 0.35f);
                     panel.RouteMaterials.Add(mat);
                     float lane = k == 0 ? -width / 4f : width / 4f;
-                    AddRoute(pivot, $"{route.name}", route.grade, lane, width, mat, p, rnd);
+                    panel.StartHolds.Add(AddRoute(pivot, $"{route.name}", route.grade, lane, width, mat, p, rnd));
                 }
 
                 int volumes = rnd.Next(1, 3);
@@ -84,9 +86,11 @@ namespace Boulderhalle
             return panels;
         }
 
-        static void AddRoute(Transform pivot, string colorName, string grade, float lane, float width, Material mat, Palette p, System.Random rnd)
+        /// <returns>Ankerpunkt am Startgriff (lokal: Kletterfläche, z = 0).</returns>
+        static Transform AddRoute(Transform pivot, string colorName, string grade, float lane, float width, Material mat, Palette p, System.Random rnd)
         {
             var g = Geo.Group("Route_" + colorName, pivot, Vector3.zero);
+            Transform start = null;
             int n = rnd.Next(7, 11);
             const float yStart = 0.55f, yEnd = PanelHeight - 0.35f;
             for (int j = 0; j < n; j++)
@@ -97,6 +101,8 @@ namespace Boulderhalle
                 var pos = new Vector3(x, y, 0f);
                 AddHold(g, $"Griff_{j + 1}", pos, size, mat, rnd);
 
+                if (j == 1) start = Geo.Group("Startgriff", g, pos);
+
                 // Start- und Topmarkierung mit Tape
                 if (j == 1 || j == n - 1)
                     Geo.Box(j == 1 ? "Starttape" : "Toptape", g, pos + new Vector3(0f, -size * 0.6f - 0.03f, -0.004f),
@@ -106,6 +112,7 @@ namespace Boulderhalle
             Geo.Box("Routenschild", g, new Vector3(lane, 0.72f, -0.006f), new Vector3(0.46f, 0.2f, 0.01f), p.White, collider: false);
             Geo.Box("Routenschild_Farbe", g, new Vector3(lane, 0.83f, -0.007f), new Vector3(0.46f, 0.04f, 0.012f), mat, collider: false);
             Geo.Text("Routenname", g, new Vector3(lane, 0.71f, -0.013f), 0f, $"{colorName}\n{grade}", 0.06f, new Color(0.1f, 0.1f, 0.1f), p.TextMat);
+            return start;
         }
 
         public static GameObject AddHold(Transform parent, string name, Vector3 localPos, float size, Material mat, System.Random rnd)

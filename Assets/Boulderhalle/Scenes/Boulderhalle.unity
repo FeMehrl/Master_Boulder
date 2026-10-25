@@ -21423,7 +21423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393296505}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9135583, w: -0.40670782}
   m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33025,7 +33025,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.02}
-  m_LocalScale: {x: 2, y: 0.55, z: 0.02}
+  m_LocalScale: {x: 2.2, y: 0.55, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1205355010}
@@ -36715,7 +36715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713968118}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9511735, w: -0.30865684}
   m_LocalPosition: {x: 0, y: 0, z: -0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42166,7 +42166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838487264}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.05233605, w: -0.9986295}
   m_LocalPosition: {x: 0, y: 0, z: -0.039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -71556,11 +71556,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382003465}
-  m_Text: 'Hallo und herzlich willkommen!
-
-    Du bist neu hier? Melde dich bitte
-
-    am Anmeldecomputer an.'
+  m_Text: "Hallo und herzlich willkommen!\nDu bist neu hier? Dann mach' bitte\nunsere Sicherheitseinweisung. \nBetritt daf\xFCr den sportlichen Hallenbereich.  "
   m_OffsetZ: 0
   m_CharacterSize: 0.0171875
   m_LineSpacing: 1

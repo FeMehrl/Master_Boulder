@@ -17,7 +17,7 @@ namespace Boulderhalle
         const string ChalkbagText = "Hier ist das sogenannte Chalk drin. Das nutzt du, um deine Hände für einen besseren Griff trocken zu halten.";
         const string BrushText = "Tritte und Griffe müssen regelmäßig von Chalk befreit werden. Dafür helfen dir diese kleinen Bürsten.";
         const string LoseTitle = "Du hast verloren!";
-        const string LoseText = "Du hast gerade zwei Menschen in Gefahr gebracht. Achte immer auf deine Umgebung und ob jemand an der Wand bouldert!";
+        const string LoseText = "Achte immer auf deine Umgebung und ob jemand an der Wand bouldert!";
         const string WinTitle = "Glückwunsch, hier bist du richtig!";
         const string WinText = "Du startest deine Route an den markierten Startgriffen. Es dürfen lediglich Griffe der gleichen Farbe verwendet werden. " +
                                "Du hast deine Route erfolgreich beendet, wenn du oben am markierten Topgriff angekommen bist.";

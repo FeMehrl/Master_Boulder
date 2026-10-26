@@ -1,120 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1210" viewBox="0 0 2100 1210">
-<rect width="2100" height="1210" fill="#FFFFFF"/>
-<defs><marker id="pfeil" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2F3B45"/></marker></defs>
-<text x="1050.0" y="45.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="20" text-anchor="middle" font-weight="bold" fill="#2F3B45">Ablauf eines neuen Kunden in der VR-Boulderhalle – UML-Aktivitätsdiagramm</text>
-<circle cx="760" cy="90" r="13" fill="#000"/>
-<polygon points="760,135 775,150 760,165 745,150" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<polyline points="760,103 760,135" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<rect x="600.0" y="196.0" width="320" height="58" rx="16" fill="#D6EAF8" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="760" y="220.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Kunde kommt am Startpunkt</text>
-<text x="760" y="240.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">in der Eingangshalle an</text>
-<polyline points="760,165 760,196.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<rect x="600.0" y="290.0" width="320" height="50" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="760" y="320.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Mitarbeiter begrüßt den Kunden</text>
-<polyline points="760,254.0 760,290.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<path d="M960,278 h356 l14,14 v59 h-370 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M1316,278 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="972" y="302" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Hallo und herzlich willkommen! Du bist neu hier?</text>
-<text x="972" y="321" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Dann mach' bitte unsere Sicherheitseinweisung.</text>
-<text x="972" y="340" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Betritt dafür den sportlichen Hallenbereich.“</text>
-<line x1="920.0" y1="315" x2="960" y2="315" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<rect x="600.0" y="375.0" width="320" height="50" rx="16" fill="#D6EAF8" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="760" y="405.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Kunde betritt die Boulderhalle</text>
-<polyline points="760,340.0 760,375.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polygon points="760,460 775,475 760,490 745,475" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<polyline points="760,425.0 760,460" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<rect x="600.0" y="525.0" width="320" height="50" rx="16" fill="#D6EAF8" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="760" y="555.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Kunde klickt ein virtuelles Objekt an</text>
-<polyline points="760,490 760,525.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polygon points="760,599 860,645 760,691 660,645" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="760" y="640.8" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" fill="#2F3B45">Angeklicktes</text>
-<text x="760" y="659.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" fill="#2F3B45">Objekt?</text>
-<polyline points="760,575.0 760,599" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<rect x="370.0" y="762.0" width="210" height="56" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="475" y="785.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Pop-up-Fenster</text>
-<text x="475" y="805.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">„Bürste“ anzeigen</text>
-<rect x="600.0" y="762.0" width="210" height="56" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="705" y="785.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Pop-up-Fenster</text>
-<text x="705" y="805.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">„Chalkbag“ anzeigen</text>
-<rect x="880.0" y="762.0" width="240" height="56" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1000" y="785.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Pop-up-Fenster</text>
-<text x="1000" y="805.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">„Glückwunsch …“ anzeigen</text>
-<rect x="880.0" y="865.0" width="240" height="50" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1000" y="895.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Abschlussmeldung anzeigen</text>
-<polygon points="1000,945 1095,985 1000,1025 905,985" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1000" y="980.8" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" fill="#2F3B45">Szenario</text>
-<text x="1000" y="999.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" fill="#2F3B45">neu starten?</text>
-<rect x="905.0" y="1060.0" width="190" height="50" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1000" y="1090.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Szenario beenden</text>
-<rect x="1480.0" y="762.0" width="240" height="56" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1600" y="785.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Pop-up-Fenster</text>
-<text x="1600" y="805.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">„Du hast verloren!“ anzeigen</text>
-<rect x="1480.0" y="862.0" width="240" height="56" rx="16" fill="#FFFFFF" stroke="#2F3B45" stroke-width="1.6"/>
-<text x="1600" y="885.5" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">Kunde wird zum Startpunkt</text>
-<text x="1600" y="905.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="normal" fill="#2F3B45">zurückportiert</text>
-<polyline points="660,645 475,645 475,762.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="485" y="709.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[Bürste]</text>
-<polyline points="760,691 760,715 705,715 705,762.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="715" y="746.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[Chalkbag]</text>
-<polyline points="760,691 760,715 1000,715 1000,762.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="1010" y="746.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[pinker Startgriff]</text>
-<polyline points="860,645 1600,645 1600,762.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="1610" y="709.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[gelber Startgriff]</text>
-<polyline points="1000,818.0 1000,865.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="1000,915.0 1000,945" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="1000,1025 1000,1060.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="1010" y="1044.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[nein]</text>
-<polyline points="1600,818.0 1600,862.0" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polygon points="590,865 605,880 590,895 575,880" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<polyline points="475,818.0 475,880 575,880" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="705,818.0 705,880 605,880" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="590,895 590,935 30,935 30,475 745,475" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polygon points="2060,875 2075,890 2060,905 2045,890" fill="#F5F5F5" stroke="#2F3B45" stroke-width="1.6"/>
-<polyline points="1720.0,890 2045,890" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="1095,985 2060,985 2060,905" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<text x="1107" y="979.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="normal" fill="#2F3B45">[ja]</text>
-<polyline points="2060,875 2060,150 775,150" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<polyline points="1000,1110.0 1000,1150" fill="none" stroke="#2F3B45" stroke-width="1.6" marker-end="url(#pfeil)"/>
-<circle cx="1000" cy="1165" r="15" fill="none" stroke="#000" stroke-width="1.8"/>
-<circle cx="1000" cy="1165" r="9.5" fill="#000"/>
-<path d="M50,752 h276 l14,14 v59 h-290 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M326,752 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="62" y="776" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Tritte und Griffe müssen regelmäßig</text>
-<text x="62" y="795" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">von Chalk befreit werden. Dafür helfen</text>
-<text x="62" y="814" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">dir diese kleinen Bürsten.“</text>
-<line x1="340" y1="790" x2="370.0" y2="790" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<path d="M595,965 h281 l14,14 v59 h-295 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M876,965 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="607" y="989" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Hier ist das sogenannte Chalk drin.</text>
-<text x="607" y="1008" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Das nutzt du, um deine Hände für einen</text>
-<text x="607" y="1027" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">besseren Griff trocken zu halten.“</text>
-<line x1="770" y1="965" x2="770" y2="818" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<path d="M1145,735 h306 l14,14 v116 h-320 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M1451,735 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="1157" y="759" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Glückwunsch, hier bist du richtig! Du startest</text>
-<text x="1157" y="778" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">deine Route an den markierten Startgriffen.</text>
-<text x="1157" y="797" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Es dürfen lediglich Griffe der gleichen Farbe</text>
-<text x="1157" y="816" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">verwendet werden. Du hast deine Route</text>
-<text x="1157" y="835" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">erfolgreich beendet, wenn du oben am</text>
-<text x="1157" y="854" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">markierten Topgriff angekommen bist.“</text>
-<line x1="1120.0" y1="790" x2="1145" y2="790" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<path d="M1145,885 h306 l14,14 v78 h-320 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M1451,885 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="1157" y="909" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Einweisung abgeschlossen – Gut gemacht!</text>
-<text x="1157" y="928" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Denk immer daran: Halte den Sturzbereich</text>
-<text x="1157" y="947" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">unter boulderenden Personen frei und starte</text>
-<text x="1157" y="966" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">erst, wenn über dir niemand an der Wand ist.“</text>
-<line x1="1120.0" y1="890" x2="1145" y2="890" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<path d="M1745,760 h276 l14,14 v59 h-290 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="1.3"/>
-<path d="M2021,760 v14 h14" fill="none" stroke="#C9A227" stroke-width="1.3"/>
-<text x="1757" y="784" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">„Du hast verloren! Achte immer auf deine</text>
-<text x="1757" y="803" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">Umgebung und ob jemand an der Wand</text>
-<text x="1757" y="822" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" fill="#333">bouldert!“</text>
-<line x1="1720.0" y1="790" x2="1745" y2="790" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="6,4"/>
-<rect x="1770" y="1080" width="290" height="104" rx="8" fill="#FAFAFA" stroke="#999"/>
-<text x="1784" y="1106.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="start" font-weight="bold" fill="#2F3B45">Legende</text>
-<rect x="1784" y="1116" width="44" height="22" rx="8" fill="#D6EAF8" stroke="#2F3B45"/>
-<text x="1840" y="1131.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="normal" fill="#2F3B45">Aktion des Kunden</text>
-<rect x="1784" y="1148" width="44" height="22" rx="8" fill="#FFFFFF" stroke="#2F3B45"/>
-<text x="1840" y="1163.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="normal" fill="#2F3B45">Aktion der VR-Lernumgebung</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="453.5pt" height="663.8pt" viewBox="0 0 453.5 663.8">
+<rect width="453.5" height="663.8" fill="#FFFFFF"/>
+<defs><marker id="pfeil" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2F3B45"/></marker></defs>
+<circle cx="228" cy="9" r="6" fill="#000"/>
+<polygon points="228,22 234,28 228,34 222,28" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<polyline points="228.0,15.0 228.0,22.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="144.0" y="37.4" width="168" height="35.3" rx="8" fill="#D6EAF8" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="228.0" y="52.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Kunde kommt am Startpunkt</text>
+<text x="228.0" y="65.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">in der Eingangshalle an</text>
+<polyline points="228.0,34.0 228.0,37.4" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="163.0" y="81.3" width="130" height="35.3" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="228.0" y="96.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Mitarbeiter begrüßt</text>
+<text x="228.0" y="109.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">den Kunden (1)</text>
+<polyline points="228.0,72.7 228.0,81.3" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="144.0" y="125.7" width="168" height="22.6" rx="8" fill="#D6EAF8" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="228.0" y="140.8" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Kunde betritt die Boulderhalle</text>
+<polyline points="228.0,116.7 228.0,125.7" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polygon points="228,159 234,165 228,171 222,165" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<polyline points="228.0,148.3 228.0,159.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="128.0" y="178.7" width="200" height="22.6" rx="8" fill="#D6EAF8" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="228.0" y="193.8" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Kunde klickt ein virtuelles Objekt an</text>
+<polyline points="228.0,171.0 228.0,178.7" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polygon points="228,210 294,234 228,258 162,234" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="228.0" y="231.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Angeklicktes</text>
+<text x="228.0" y="244.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Objekt?</text>
+<polyline points="228.0,201.3 228.0,210.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="12.0" y="298.0" width="100" height="48.0" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="62.0" y="313.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Pop-up-Fenster</text>
+<text x="62.0" y="325.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">„Bürste“</text>
+<text x="62.0" y="338.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">anzeigen (2)</text>
+<rect x="122.0" y="298.0" width="100" height="48.0" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="172.0" y="313.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Pop-up-Fenster</text>
+<text x="172.0" y="325.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">„Chalkbag“</text>
+<text x="172.0" y="338.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">anzeigen (3)</text>
+<rect x="232.0" y="298.0" width="104" height="48.0" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="284.0" y="313.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Pop-up-Fenster</text>
+<text x="284.0" y="325.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">„Glückwunsch …“</text>
+<text x="284.0" y="338.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">anzeigen (4)</text>
+<rect x="338.0" y="298.0" width="100" height="48.0" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="388.0" y="313.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Pop-up-Fenster</text>
+<text x="388.0" y="325.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">„Du hast verlo-</text>
+<text x="388.0" y="338.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">ren!“ anzeigen (6)</text>
+<polyline points="162.0,234.0 62.0,234.0 62.0,298.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="66.0" y="281.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">[Bürste]</text>
+<polyline points="228.0,258.0 228.0,268.0 172.0,268.0 172.0,298.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="176.0" y="286.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">[Chalkbag]</text>
+<polyline points="228.0,258.0 228.0,268.0 284.0,268.0 284.0,298.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="288.0" y="281.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">[pinker</text>
+<text x="288.0" y="293.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">Startgriff]</text>
+<polyline points="294.0,234.0 388.0,234.0 388.0,298.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="392.0" y="269.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">[gelber</text>
+<text x="392.0" y="281.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">Startgriff]</text>
+<polygon points="117.0,362 123.0,368 117.0,374 111.0,368" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<polyline points="62.0,346.0 62.0,368.0 111.0,368.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polyline points="172.0,346.0 172.0,368.0 123.0,368.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polyline points="117.0,374.0 117.0,384.0 5.0,384.0 5.0,165.0 222.0,165.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="232.0" y="362.4" width="104" height="35.3" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="284.0" y="377.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Abschlussmeldung</text>
+<text x="284.0" y="390.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">anzeigen (5)</text>
+<polyline points="284.0,346.0 284.0,362.4" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polygon points="284,409 344,432 284,455 224,432" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="284.0" y="429.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Szenario</text>
+<text x="284.0" y="442.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">neu starten?</text>
+<polyline points="284.0,397.6 284.0,409.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="82.0" y="414.4" width="92" height="35.3" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="128.0" y="429.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Szenario</text>
+<text x="128.0" y="442.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">beenden</text>
+<polyline points="224.0,432.0 174.0,432.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="199.0" y="425.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">[nein]</text>
+<polyline points="128.0,449.6 128.0,461.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<circle cx="128" cy="468" r="7" fill="none" stroke="#000" stroke-width="1"/>
+<circle cx="128" cy="468" r="4.5" fill="#000"/>
+<rect x="338.0" y="356.0" width="100" height="48.0" rx="8" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.9"/>
+<text x="388.0" y="371.2" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Kunde wird zum</text>
+<text x="388.0" y="383.9" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">Startpunkt</text>
+<text x="388.0" y="396.5" font-family="Arial" font-size="11" text-anchor="middle" font-weight="normal" fill="#1F2328">zurückportiert</text>
+<polyline points="388.0,346.0 388.0,356.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polygon points="388,426 394,432 388,438 382,432" fill="#F5F5F5" stroke="#2F3B45" stroke-width="0.9"/>
+<polyline points="388.0,404.0 388.0,426.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<polyline points="344.0,432.0 382.0,432.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<text x="348.0" y="427.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">[ja]</text>
+<polyline points="394.0,432.0 448.0,432.0 448.0,28.0 234.0,28.0" fill="none" stroke="#2F3B45" stroke-width="0.9" marker-end="url(#pfeil)"/>
+<rect x="6" y="4" width="104" height="52" rx="3" fill="#FAFAFA" stroke="#999" stroke-width="0.6"/>
+<text x="12.0" y="18.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="bold" fill="#1F2328">Legende</text>
+<rect x="12" y="24" width="18" height="10" rx="4" fill="#D6EAF8" stroke="#2F3B45" stroke-width="0.7"/>
+<text x="35.0" y="32.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">Kunde</text>
+<rect x="12" y="40" width="18" height="10" rx="4" fill="#FFFFFF" stroke="#2F3B45" stroke-width="0.7"/>
+<text x="35.0" y="48.9" font-family="Arial" font-size="11" text-anchor="start" font-weight="normal" fill="#1F2328">VR-Umgebung</text>
+<path d="M320,40 h115 l7,7 v114.9 h-122 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M435,40 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="327" y="56.0" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(1) Begrüßung</text>
+<text x="327" y="68.7" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Hallo und herzlich</text>
+<text x="327" y="81.3" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">willkommen! Du bist</text>
+<text x="327" y="94.0" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">neu hier? Dann</text>
+<text x="327" y="106.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">mach' bitte unsere</text>
+<text x="327" y="119.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Sicherheitsein-</text>
+<text x="327" y="131.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">weisung. Betritt dafür</text>
+<text x="327" y="144.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">den sportlichen</text>
+<text x="327" y="157.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Hallenbereich.“</text>
+<path d="M6,61 h127 l7,7 v76.9 h-134 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M133,61 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="13" y="77.0" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(2) Bürste</text>
+<text x="13" y="89.7" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Tritte und Griffe</text>
+<text x="13" y="102.3" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">müssen regelmäßig von</text>
+<text x="13" y="115.0" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Chalk befreit werden.</text>
+<text x="13" y="127.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Dafür helfen dir diese</text>
+<text x="13" y="140.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">kleinen Bürsten.“</text>
+<path d="M8,486 h136 l7,7 v76.9 h-143 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M144,486 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="15" y="502.0" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(3) Chalkbag</text>
+<text x="15" y="514.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Hier ist das sogenannte</text>
+<text x="15" y="527.3" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Chalk drin. Das nutzt du,</text>
+<text x="15" y="540.0" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">um deine Hände für einen</text>
+<text x="15" y="552.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">besseren Griff trocken zu</text>
+<text x="15" y="565.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">halten.“</text>
+<path d="M8,575.9 h136 l7,7 v76.9 h-143 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M144,575.9 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="15" y="591.9" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(6) Verloren</text>
+<text x="15" y="604.5" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Du hast verloren! Achte</text>
+<text x="15" y="617.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">immer auf deine</text>
+<text x="15" y="629.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Umgebung und ob</text>
+<text x="15" y="642.5" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">jemand an der Wand</text>
+<text x="15" y="655.1" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">bouldert!“</text>
+<path d="M157,486 h133 l7,7 v165.5 h-140 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M290,486 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="164" y="502.0" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(4) Glückwunsch</text>
+<text x="164" y="514.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Glückwunsch, hier bist</text>
+<text x="164" y="527.3" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">du richtig! Du startest</text>
+<text x="164" y="540.0" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">deine Route an den</text>
+<text x="164" y="552.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">markierten Startgriffen.</text>
+<text x="164" y="565.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Es dürfen lediglich Griffe</text>
+<text x="164" y="577.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">der gleichen Farbe</text>
+<text x="164" y="590.5" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">verwendet werden. Du</text>
+<text x="164" y="603.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">hast deine Route</text>
+<text x="164" y="615.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">erfolgreich beendet,</text>
+<text x="164" y="628.5" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">wenn du oben am</text>
+<text x="164" y="641.1" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">markierten Topgriff</text>
+<text x="164" y="653.8" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">angekommen bist.“</text>
+<path d="M303,486 h135 l7,7 v127.5 h-142 z" fill="#FFF8DC" stroke="#C9A227" stroke-width="0.8"/>
+<path d="M438,486 v7 h7" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+<text x="310" y="502.0" font-family="Arial" font-size="11" font-weight="bold" fill="#1F2328">(5) Abschlussmeldung</text>
+<text x="310" y="514.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">„Einweisung</text>
+<text x="310" y="527.3" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">abgeschlossen – Gut</text>
+<text x="310" y="540.0" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">gemacht! Denk immer</text>
+<text x="310" y="552.6" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">daran: Halte den Sturz-</text>
+<text x="310" y="565.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">bereich unter boul-</text>
+<text x="310" y="577.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">derenden Personen frei</text>
+<text x="310" y="590.5" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">und starte erst, wenn</text>
+<text x="310" y="603.2" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">über dir niemand an der</text>
+<text x="310" y="615.9" font-family="Arial" font-size="11" font-weight="normal" fill="#1F2328">Wand ist.“</text>
 </svg>

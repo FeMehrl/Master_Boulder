@@ -19,7 +19,7 @@ namespace Boulderhalle
         public float runSpeed = 4.0f;
         public float lookSensitivity = 0.12f;
         [Tooltip("Maximale Entfernung (m), aus der ein Startgriff 'berührt' werden kann.")]
-        public float touchReach = 1.6f;
+        public float startHoldReach = 3f;
 
         CharacterController controller;
         float pitch;
@@ -130,7 +130,7 @@ namespace Boulderhalle
             }
 
             if (aimed != null && aimed.IsStartHold)
-                aimedTooFar = Vector3.Distance(origin, aimed.transform.position) > touchReach;
+                aimedTooFar = Vector3.Distance(origin, aimed.transform.position) > startHoldReach;
         }
 
         bool HasLineOfSight(Vector3 origin, ScenarioObject o)

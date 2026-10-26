@@ -57,7 +57,7 @@ Auch direkt an der Wand bleiben sie lesbar.
 
 **Desktop-Test ohne Brille:**
 - WASD/Pfeiltasten: laufen. Maus: umsehen. Shift: schneller.
-- **Linksklick oder E:** Objekt in der Bildmitte auswählen. Startgriffe funktionieren nur aus maximal 1,6 m Entfernung.
+- **Linksklick oder E:** Objekt in der Bildmitte auswählen. Startgriffe funktionieren nur aus maximal 3 m Entfernung (einstellbar über `startHoldReach` am Objekt `Spieler_Desktop`).
 - **Enter/Leertaste** oder Mausklick: Knopf im Pop-up drücken.
 - Esc gibt die Maus frei.
 

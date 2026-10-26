@@ -1,0 +1,67 @@
+@startuml Aktivitaetsdiagramm_Szenario
+' UML-Aktivitätsdiagramm: Szenario "Sturzbereiche freihalten" (VR-Prototyp Boulderhalle)
+' Rendern: plantuml -tsvg Aktivitaetsdiagramm_Szenario.puml  (oder https://www.plantuml.com/plantuml)
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam ActivityBackgroundColor #FFFFFF
+skinparam ActivityBorderColor #2F3B45
+skinparam ActivityDiamondBackgroundColor #F5F5F5
+skinparam ActivityDiamondBorderColor #2F3B45
+skinparam ArrowColor #2F3B45
+skinparam NoteBackgroundColor #FFF8DC
+skinparam NoteBorderColor #C9A227
+
+title Szenario „Sturzbereiche freihalten“ – UML-Aktivitätsdiagramm
+
+legend right
+  <b>Legende</b>
+  |<#D6EAF8>      | Aktion des Nutzers |
+  |<#FFFFFF>      | Aktion der VR-Lernumgebung |
+endlegend
+
+start
+repeat :Szene laden und Nutzer am festen\nStartpunkt im Eingangsbereich platzieren;
+  note left: FA1.1
+  :Begrüßung durch virtuellen Mitarbeiter anzeigen;
+  note left
+    „Hallo und herzlich willkommen!
+    Du bist neu hier? Dann mach' bitte unsere
+    Sicherheitseinweisung. Betritt dafür den
+    sportlichen Hallenbereich.“
+  end note
+
+  #D6EAF8:Sportlichen Hallenbereich betreten;
+
+  repeat
+    #D6EAF8:Umgebung mit Controllern frei erkunden\n(Laufen/Teleport, Matten betreten);
+    note right: FA3.1, FA3.2, FA8.1
+    #D6EAF8:Farblich markiertes Objekt auswählen\nbzw. Startgriff berühren;
+    note right: NFA1.1
+
+    if (Objekt?) then ([Chalkbag / Bürste])
+      :Pop-up mit kurzer Erklärung anzeigen\nund Hinweiston abspielen;
+      note left: FA4.4, FA4.5, NFA1.2
+      #D6EAF8:Pop-up mit „OK“ schließen;
+    else ([Startgriff])
+    endif
+  repeat while (Startgriff berührt?) is ([nein]) not ([ja])
+
+  if (Bouldert an dieser Route\nbereits ein anderer Kunde?) then ([ja])
+    :Pop-up „Du hast verloren! …“ anzeigen\nund negativen Ton abspielen;
+    note left
+      Unmittelbares visuelles und
+      akustisches Feedback
+      (FA5.1, FA5.2, FA5.4)
+    end note
+    #D6EAF8:„Nochmal versuchen“ wählen;
+  else ([nein])
+    :Pop-up „Glückwunsch, hier bist du richtig! …“\nanzeigen und positiven Ton abspielen;
+    #D6EAF8:„Einweisung abschließen“ wählen;
+    :Abschlussmeldung anzeigen;
+    #D6EAF8:„Neu starten“ wählen\noder Anwendung beenden;
+  endif
+
+repeat while (Neustart gewählt?) is ([ja]) not ([nein])
+
+stop
+@enduml

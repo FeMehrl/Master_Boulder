@@ -6,7 +6,7 @@ Texte und Positionen lassen sich unten direkt anpassen.
 """
 from xml.sax.saxutils import escape
 
-W, H = 1420, 1090
+W, H = 1780, 1110
 FONT = "Arial, Liberation Sans, Helvetica, sans-serif"
 LINE, KUNDE, SYSTEM, RAUTE = "#2F3B45", "#D6EAF8", "#FFFFFF", "#F5F5F5"
 NOTIZ, NOTIZ_RAND = "#FFF8DC", "#C9A227"
@@ -86,15 +86,20 @@ d = diamond(C, 645, 100, 46, ["Angeklicktes", "Objekt?"])
 flow(a4["bottom"], d["top"])
 
 # Zweige
-by = 790
+by, by2 = 790, 890
+PX, GX = 1000, 1300  # Spalten pinker / gelber Startgriff
 b1 = action(475, by, 210, 56, ["Pop-up-Fenster", "„Bürste“ anzeigen"])
 b2 = action(705, by, 210, 56, ["Pop-up-Fenster", "„Chalkbag“ anzeigen"])
-b3 = action(950, by, 190, 56, "Szenario beenden")
-b4 = action(1200, by, 240, 56, ["Kunde wird zum Startpunkt", "zurückportiert"])
+b3 = action(PX, by, 240, 56, ["Pop-up-Fenster", "„Glückwunsch …“ anzeigen"])
+b3b = action(PX, by2, 190, 50, "Szenario beenden")
+b4 = action(GX, by, 240, 56, ["Pop-up-Fenster", "„Du hast verloren!“ anzeigen"])
+b4b = action(GX, by2, 240, 56, ["Kunde wird zum Startpunkt", "zurückportiert"])
 flow(d["left"], (475, 645), b1["top"], guard="[Bürste]", gpos=(485, 705), ganchor="start")
 flow(d["bottom"], (C, 715), (705, 715), b2["top"], guard="[Chalkbag]", gpos=(715, 742), ganchor="start")
-flow(d["bottom"], (C, 715), (950, 715), b3["top"], guard="[pinker Startgriff]", gpos=(960, 742), ganchor="start")
-flow(d["right"], (1200, 645), b4["top"], guard="[gelber Startgriff]", gpos=(1210, 705), ganchor="start")
+flow(d["bottom"], (C, 715), (PX, 715), b3["top"], guard="[pinker Startgriff]", gpos=(PX + 10, 742), ganchor="start")
+flow(d["right"], (GX, 645), b4["top"], guard="[gelber Startgriff]", gpos=(GX + 10, 705), ganchor="start")
+flow(b3["bottom"], b3b["top"])
+flow(b4["bottom"], b4b["top"])
 
 # Bürste/Chalkbag -> zurück zum Anklicken
 m3 = diamond(590, 880, 15, 15)
@@ -103,12 +108,25 @@ flow(b2["bottom"], (705, 880), m3["right"])
 flow(m3["bottom"], (590, 935), (30, 935), (30, 475), m2["left"])
 
 # Gelber Startgriff -> zurück zum Startpunkt
-flow(b4["right"], (1370, by), (1370, 150), m1["right"])
+flow(b4b["right"], (1755, by2), (1755, 150), m1["right"])
 
 # Pinker Startgriff -> Ende
-flow(b3["bottom"], (950, 875))
-out.append(f'<circle cx="950" cy="890" r="15" fill="none" stroke="#000" stroke-width="1.8"/>')
-out.append(f'<circle cx="950" cy="890" r="9.5" fill="#000"/>')
+flow(b3b["bottom"], (PX, 960))
+out.append(f'<circle cx="{PX}" cy="975" r="15" fill="none" stroke="#000" stroke-width="1.8"/>')
+out.append(f'<circle cx="{PX}" cy="975" r="9.5" fill="#000"/>')
+
+# Notizen zu den Startgriff-Pop-ups
+note(1440, 742, 300, ["„Du hast verloren! Du hast gerade zwei",
+                      "Menschen in Gefahr gebracht. Achte immer",
+                      "auf deine Umgebung und ob jemand an der",
+                      "Wand bouldert!“"], attach=(b4["right"], (1440, 790)))
+note(1060, 950, 320, ["„Glückwunsch, hier bist du richtig! Du startest",
+                      "deine Route an den markierten Startgriffen.",
+                      "Es dürfen lediglich Griffe der gleichen Farbe",
+                      "verwendet werden. Du hast deine Route",
+                      "erfolgreich beendet, wenn du oben am",
+                      "markierten Topgriff angekommen bist.“"], attach=((1135, 950), (1135, 790)))
+out.append(f'<line x1="{b3["right"][0]}" y1="790" x2="1135" y2="790" stroke="{NOTIZ_RAND}" stroke-width="1.3" stroke-dasharray="6,4"/>')
 
 # Notizen zu den Pop-ups
 note(50, 752, 290, ["„Tritte und Griffe müssen regelmäßig",
@@ -119,7 +137,7 @@ note(620, 965, 320, ["„Hier ist das sogenannte Chalk drin.",
                      "besseren Griff trocken zu halten.“"], attach=((770, 965), (770, 818)))
 
 # Legende
-lx, ly = 1080, 960
+lx, ly = 1440, 975
 out.append(f'<rect x="{lx}" y="{ly}" width="290" height="104" rx="8" fill="#FAFAFA" stroke="#999"/>')
 text(lx + 14, ly + 22, "Legende", size=14, anchor="start", weight="bold")
 out.append(f'<rect x="{lx + 14}" y="{ly + 36}" width="44" height="22" rx="8" fill="{KUNDE}" stroke="{LINE}"/>')

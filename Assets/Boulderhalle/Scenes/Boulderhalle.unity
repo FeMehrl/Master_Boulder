@@ -20787,7 +20787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421370884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.68337893, w: 0.73006386}
   m_LocalPosition: {x: 0, y: 0, z: -0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -71681,7 +71681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Boulderhalle.ScenarioObject
   kind: 1
   title: Du hast verloren!
-  message: Du hast gerade zwei Menschen in Gefahr gebracht. Achte immer auf deine Umgebung und ob jemand an der Wand bouldert!
+  message: Achte immer auf deine Umgebung und ob jemand an der Wand bouldert!
   touchRadius: 0.15
 --- !u!1 &1416552279
 GameObject:
@@ -77346,7 +77346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556072242}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.44475457, w: -0.8956525}
   m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -87707,7 +87707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750005956}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9135455, w: 0.4067366}
   m_LocalPosition: {x: 0, y: 0, z: -0.039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -92166,7 +92166,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 3
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1815609383
 Canvas:
   m_ObjectHideFlags: 0
@@ -109127,7 +109127,7 @@ MonoBehaviour:
   moveSpeed: 2
   runSpeed: 4
   lookSensitivity: 0.12
-  touchReach: 1.6
+  startHoldReach: 3
 --- !u!143 &2132316249
 CharacterController:
   m_ObjectHideFlags: 0

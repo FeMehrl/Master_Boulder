@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="660" viewBox="0 0 1420 660">
+<rect width="1420" height="660" fill="#FFFFFF"/>
+<defs><marker id="pfeil" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F2328"/></marker></defs>
+<rect x="15" y="15" width="470" height="630" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="250" y="45.6" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" font-style="normal" fill="#6B7280">Entwicklung</text>
+<rect x="65" y="65" width="370" height="92" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="250.0" y="101.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="19" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Konzeption</text>
+<text x="250.0" y="124.1" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Anforderungen · Szenario · Texte</text>
+<text x="250.0" y="141.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">(Autor/in)</text>
+<rect x="65" y="222" width="370" height="100" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="250.0" y="262.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="22" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Claude Code</text>
+<text x="250.0" y="294.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">KI-Assistent (Anthropic)</text>
+<polyline points="250.0,157 250.0,222" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<text x="260" y="194.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#1F2328">Vorgaben in natürlicher Sprache</text>
+<rect x="115" y="385" width="270" height="50" rx="3" fill="#3A3A3A" stroke="#3A3A3A" stroke-width="1"/>
+<text x="250.0" y="415.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" font-style="normal" fill="#FFFFFF">C#-Skripte &amp; Shader</text>
+<polyline points="250.0,322 250.0,385" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<text x="260" y="358.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#1F2328">generiert</text>
+<rect x="65" y="500" width="370" height="92" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="250.0" y="536.6" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="19" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Git / GitHub</text>
+<text x="250.0" y="558.1" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Versionierung · Repository</text>
+<text x="250.0" y="575.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Abgleich über GitHub Desktop</text>
+<polyline points="250.0,435 250.0,500" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<text x="260" y="472.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#1F2328">Commit / Push</text>
+<rect x="510" y="15" width="895" height="630" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="958" y="45.6" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" font-style="normal" fill="#6B7280">Anwendung</text>
+<rect x="545" y="60" width="92" height="46" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="1.6"/>
+<text x="591.0" y="87.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">OpenXR</text>
+<rect x="645" y="60" width="118" height="46" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="1.6"/>
+<text x="704.0" y="79.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">XR Interaction</text>
+<text x="704.0" y="95.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Toolkit</text>
+<rect x="771" y="60" width="110" height="46" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="1.6"/>
+<text x="826.0" y="87.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Input System</text>
+<rect x="889" y="60" width="62" height="46" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="1.6"/>
+<text x="920.0" y="87.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">URP</text>
+<rect x="959" y="60" width="98" height="46" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="1.6"/>
+<text x="1008.0" y="87.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">uGUI · TMP</text>
+<rect x="545" y="120" width="512" height="110" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="801.0" y="176.0" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="40" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Unity 6</text>
+<text x="801.0" y="209.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Spiel-Engine · Editor · Szenengenerator (Menü „Boulderhalle“)</text>
+<rect x="555" y="285" width="230" height="64" rx="3" fill="#3A3A3A" stroke="#3A3A3A" stroke-width="1"/>
+<text x="670.0" y="310.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" font-style="normal" fill="#FFFFFF">Statisches Modell</text>
+<text x="670.0" y="333.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#D9DDE3">Halle aus Unity-Grundkörpern</text>
+<rect x="820" y="285" width="230" height="64" rx="3" fill="#3A3A3A" stroke="#3A3A3A" stroke-width="1"/>
+<text x="935.0" y="310.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" font-style="normal" fill="#FFFFFF">Dynamisches Modell</text>
+<text x="935.0" y="333.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#D9DDE3">Szenario „Sturzbereiche freihalten“</text>
+<polyline points="785,317.0 820,317.0" fill="none" stroke="#1F2328" stroke-width="1.8" marker-start="url(#pfeil)" marker-end="url(#pfeil)"/>
+<rect x="640" y="430" width="325" height="120" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="802.5" y="468.6" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="19" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Scripting</text>
+<text x="802.5" y="502.1" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Szenengenerierung · Interaktion</text>
+<text x="802.5" y="519.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Feedback (Pop-ups, Töne)</text>
+<polyline points="732.5,430 732.5,392 670.0,392 670.0,349" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<polyline points="872.5,430 872.5,392 935.0,392 935.0,349" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<text x="802.5" y="414.7" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1F2328">C#</text>
+<polyline points="435,546.0 560,546 560,490 640,490.0" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<text x="600" y="571.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1F2328">Pull in das</text>
+<text x="600" y="587.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="13" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1F2328">Unity-Projekt</text>
+<rect x="1110" y="120" width="270" height="110" rx="4" fill="#FFFFFF" stroke="#1F2328" stroke-width="2"/>
+<text x="1245.0" y="154.3" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">Ausgabe</text>
+<text x="1245.0" y="187.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1F2328">Meta Quest (OpenXR)</text>
+<text x="1245.0" y="205.9" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="14" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1F2328">Quest Link / Android-Build</text>
+<polyline points="1057,175.0 1110,175.0" fill="none" stroke="#1F2328" stroke-width="1.8" marker-end="url(#pfeil)"/>
+<rect x="1140" y="300" width="58" height="40" rx="3" fill="none" stroke="#1F2328" stroke-width="2.4"/>
+<path d="M1162,340 v9 M1176,340 v9 M1155,350 h28" stroke="#1F2328" stroke-width="2.4" fill="none"/>
+<rect x="1208" y="296" width="20" height="54" rx="2" fill="none" stroke="#1F2328" stroke-width="2.4"/>
+<path d="M1212,306 h12 M1212,313 h12" stroke="#1F2328" stroke-width="2"/>
+<path d="M1270,313 q0,-8 10,-8 h56 q10,0 10,8 v22 q0,10 -10,10 h-18 q-5,0 -8,-6 q-3,-5 -6,0 q-3,6 -8,6 h-16 q-10,0 -10,-10 z" fill="none" stroke="#1F2328" stroke-width="2.4"/>
+<text x="1308" y="328.2" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1F2328">VR</text>
+<text x="1185" y="374.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Desktop-</text>
+<text x="1185" y="390.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">Testmodus</text>
+<text x="1308" y="382.4" font-family="Arial, Liberation Sans, Helvetica, sans-serif" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#6B7280">VR-Brille</text>
+<line x1="1245" y1="270" x2="1245" y2="400" stroke="#D0D4DA" stroke-width="1.2"/>
+</svg>

@@ -6,7 +6,7 @@ Texte und Positionen lassen sich unten direkt anpassen.
 """
 from xml.sax.saxutils import escape
 
-W, H = 2090, 1110
+W, H = 2100, 1210
 FONT = "Arial, Liberation Sans, Helvetica, sans-serif"
 LINE, KUNDE, SYSTEM, RAUTE = "#2F3B45", "#D6EAF8", "#FFFFFF", "#F5F5F5"
 NOTIZ, NOTIZ_RAND = "#FFF8DC", "#C9A227"
@@ -92,7 +92,8 @@ b1 = action(475, by, 210, 56, ["Pop-up-Fenster", "„Bürste“ anzeigen"])
 b2 = action(705, by, 210, 56, ["Pop-up-Fenster", "„Chalkbag“ anzeigen"])
 b3 = action(PX, by, 240, 56, ["Pop-up-Fenster", "„Glückwunsch …“ anzeigen"])
 b3c = action(PX, by2, 240, 50, "Abschlussmeldung anzeigen")
-b3b = action(PX, 980, 190, 50, "Szenario beenden")
+d2 = diamond(PX, 985, 95, 40, ["Szenario", "neu starten?"])
+b3b = action(PX, 1085, 190, 50, "Szenario beenden")
 b4 = action(GX, by, 240, 56, ["Pop-up-Fenster", "„Du hast verloren!“ anzeigen"])
 b4b = action(GX, by2, 240, 56, ["Kunde wird zum Startpunkt", "zurückportiert"])
 flow(d["left"], (475, 645), b1["top"], guard="[Bürste]", gpos=(485, 705), ganchor="start")
@@ -100,7 +101,8 @@ flow(d["bottom"], (C, 715), (705, 715), b2["top"], guard="[Chalkbag]", gpos=(715
 flow(d["bottom"], (C, 715), (PX, 715), b3["top"], guard="[pinker Startgriff]", gpos=(PX + 10, 742), ganchor="start")
 flow(d["right"], (GX, 645), b4["top"], guard="[gelber Startgriff]", gpos=(GX + 10, 705), ganchor="start")
 flow(b3["bottom"], b3c["top"])
-flow(b3c["bottom"], b3b["top"])
+flow(b3c["bottom"], d2["top"])
+flow(d2["bottom"], b3b["top"], guard="[nein]", gpos=(PX + 10, 1040), ganchor="start")
 flow(b4["bottom"], b4b["top"])
 
 # Bürste/Chalkbag -> zurück zum Anklicken
@@ -109,13 +111,16 @@ flow(b1["bottom"], (475, 880), m3["left"])
 flow(b2["bottom"], (705, 880), m3["right"])
 flow(m3["bottom"], (590, 935), (30, 935), (30, 475), m2["left"])
 
-# Gelber Startgriff -> zurück zum Startpunkt
-flow(b4b["right"], (2060, by2), (2060, 150), m1["right"])
+# Gelber Startgriff bzw. Neustart nach Abschluss -> zurück zum Startpunkt
+m4 = diamond(2060, by2, 15, 15)
+flow(b4b["right"], m4["left"])
+flow(d2["right"], (2060, 985), m4["bottom"], guard="[ja]", gpos=(d2["right"][0] + 12, 975), ganchor="start")
+flow(m4["top"], (2060, 150), m1["right"])
 
 # Pinker Startgriff -> Ende
-flow(b3b["bottom"], (PX, 1045))
-out.append(f'<circle cx="{PX}" cy="1060" r="15" fill="none" stroke="#000" stroke-width="1.8"/>')
-out.append(f'<circle cx="{PX}" cy="1060" r="9.5" fill="#000"/>')
+flow(b3b["bottom"], (PX, 1150))
+out.append(f'<circle cx="{PX}" cy="1165" r="15" fill="none" stroke="#000" stroke-width="1.8"/>')
+out.append(f'<circle cx="{PX}" cy="1165" r="9.5" fill="#000"/>')
 
 # Notizen zu den Pop-ups
 note(50, 752, 290, ["„Tritte und Griffe müssen regelmäßig",
@@ -139,7 +144,7 @@ note(1745, 760, 290, ["„Du hast verloren! Achte immer auf deine",
                       "bouldert!“"], attach=(b4["right"], (1745, 790)))
 
 # Legende
-lx, ly = 1770, 990
+lx, ly = 1770, 1080
 out.append(f'<rect x="{lx}" y="{ly}" width="290" height="104" rx="8" fill="#FAFAFA" stroke="#999"/>')
 text(lx + 14, ly + 22, "Legende", size=14, anchor="start", weight="bold")
 out.append(f'<rect x="{lx + 14}" y="{ly + 36}" width="44" height="22" rx="8" fill="{KUNDE}" stroke="{LINE}"/>')
